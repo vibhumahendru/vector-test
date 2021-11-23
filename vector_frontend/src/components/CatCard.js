@@ -1,6 +1,7 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 
+// Component that renders an individual item tile
 const CatCard = ({ catItem, setSelectedItem }) => {
 
   function viewItem() {

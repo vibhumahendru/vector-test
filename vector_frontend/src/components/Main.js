@@ -9,9 +9,12 @@ import { fetchItems, setNewPositions } from "../utils/api.js";
 import { handleEsc } from "../utils/helpers.js";
 import { defaultData, REFRESH_TIME } from "../utils/constants.js";
 
+// variable to store setTimeout id
 var timeoutId;
 
 const Main = ({}) => {
+
+  // Items are fetched from database on page load
   useEffect(() => {
     window.addEventListener("keydown", handleEsc);
 
@@ -21,11 +24,14 @@ const Main = ({}) => {
     });
   }, []);
 
-  const [data, setData] = useState(defaultData);
-  const [selectedItem, setSelectedItem] = useState({});
-  const [saving, setSaving] = useState(false);
-  const [lastSaved, setLastSaved] = useState("");
+  const [data, setData] = useState(defaultData); // hook to store items data
+  const [selectedItem, setSelectedItem] = useState({}); // hook to store selected item to display as overlay
+  const [saving, setSaving] = useState(false); // hook that controls display of loaders when new positions are being saved
+  const [lastSaved, setLastSaved] = useState(""); //  hook that stroes lastSaved time information
 
+  // function responsible for saving new positions of tiles when board is changed
+  // parameter -
+  // data (type Array)
   const saveNewPositions = (data) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -37,6 +43,9 @@ const Main = ({}) => {
     }, REFRESH_TIME);
   };
 
+  // function that handles setting of new positions when tiles are re-arranged
+  // parameter -
+  // r (type Array)
   const handleDrag = (r) => {
     let destinationIndex =
       r.destination.droppableId == "droppable2"

@@ -23,6 +23,7 @@ services:
       context: ./vector_frontend
     volumes:
       - ./vector_frontend:/vector_frontend
+      - /vector_frontend/node_modules
     ports:
       - "3000:3000"
     command: npm start

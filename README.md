@@ -7,7 +7,7 @@ Below are instructions to run the application locally
 1. Clone the application
 2. Run ```cd vector-test```
 3. Ensure you have Docker installed and running
-4. Run ```docker-compose up```
+4. Run ```docker-compose up```. Please allow up to 5 minutes for the build to be completed and for the services to be powered up.
 5. Visit http://localhost:3000/ for the demo
 
 ## Answers to General Questions

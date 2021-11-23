@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  vector_backend:
+    build:
+      context: ./vector_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./vector_backend/vector_backend:/vector_backend/vector_backend
+    command: sh -c "python manage.py migrate && python manage.py loaddata items && python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DEBUG=1
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: "vector"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    hostname: postgres
+  vector_frontend:
+    build:
+      context: ./vector_frontend
+    volumes:
+      - ./vector_frontend:/vector_frontend
+    ports:
+      - "3000:3000"
+    command: npm start

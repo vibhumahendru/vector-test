@@ -1,0 +1,52 @@
+[
+  {
+    "model": "vector.items",
+    "pk":1,
+    "fields": {
+      "position":1,
+      "title": "Bank Draft",
+      "type": "bank-draft",
+      "img_url": "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__340.jpg"
+    }
+  },
+  {
+    "model": "vector.items",
+    "pk":2,
+    "fields": {
+      "position":2,
+      "title": "Bill of Lading",
+      "type": "bill-of-lading",
+      "img_url": "https://cdn.mos.cms.futurecdn.net/VSy6kJDNq2pSXsCzb6cvYF-480-80.jpg"
+    }
+  },
+  {
+    "model": "vector.items",
+    "pk":3,
+    "fields": {
+      "position":3,
+      "title": "Invoice",
+      "type": "invoice",
+      "img_url": "https://th-thumbnailer.cdn-si-edu.com/bZAar59Bdm95b057iESytYmmAjI=/1400x1050/filters:focal(594x274:595x275)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/95/db/95db799b-fddf-4fde-91f3-77024442b92d/egypt_kitty_social.jpg"
+    }
+  },
+  {
+    "model": "vector.items",
+    "pk":4,
+    "fields": {
+      "position":4,
+      "title": "Bank Draft 2",
+      "type": "bank-draft-2",
+      "img_url": "https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
+    }
+  },
+  {
+    "model": "vector.items",
+    "pk":5,
+    "fields": {
+      "position":5,
+      "title": "Bill of Lading 2",
+      "type": "bill-of-lading-2",
+      "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-cat-wearing-sunglasses-while-sitting-royalty-free-image-1571755145.jpg"
+    }
+  }
+]
